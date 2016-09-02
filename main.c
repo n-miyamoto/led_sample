@@ -8,9 +8,7 @@ int main(void)
 {
     config_init();
     
-    TRISAbits.TRISA3=0; //output
-    TRISAbits.TRISA3 = 0;   //P10: set to Output for high side switch
-    LATAbits.LATA3 = 0;     //turn off high side switch
+    TRISAbits.TRISA3 = 0;   //init digital port.
     while(1){
         LATAbits.LATA3 = rand()%2;
         delay_us(100);
